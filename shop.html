@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="./style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg px-5 rounded" aria-label="Thirteenth navbar example">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+              aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse d-lg-flex px-5 mx-5" id="navbarsExample11">
+              <a class="navbar-brand col-lg-3 me-0" href="#"><img src="./img/PC-2.png" width="150px" alt=""></a>
+              <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                <li class="nav_item">
+                  <a class="link style-2 me-3" onclick="home()" aria-current="page" type="button"><i class=" me-2 fa-solid fa-house-chimney"></i>Home</a>
+                </li>
+                <li class="nav-item me-3 dropdown">
+                  <a class="link style-2" onclick="prod()" type="button" ><i class="me-2 fa-solid fa-tag" ></i>Products</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="link style-2" onclick="about()" type="button"><i class="me-2 fa-solid fa-square-poll-horizontal"></i>About</a>
+                </li>
+                <li class="nav-item"></li>
+                  <a class="link style-2" onclick="contact()" type="button"><i class="me-2 fa fa-message" ></i>Contact</a>
+                </li>
+              </ul>
+              <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <a class="nav-link link" onclick="cart()" type="button" href="#">
+                  <i class="fa-solid fa-cart-shopping"></i> </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">ALL PRODUCTS</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <!-- <form class="d-flex">
+                <button class="btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </button>
+            </form> -->
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div id="data-container" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div  class="col mb-5" >
+                        <div id="0" class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://theme.pixflow.net/massive-dynamic/store-handicraft/wp-content/uploads/sites/62/2015/12/68a3da0e51b63c62a389b7c9501432a9-1-150x150.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                               <h4><a class="pdName" class="pdName text-hover" onclick="viewProduct(3,0)" type="button" >Red Heart Bowl</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">20.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(0)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div  class="col mb-5">
+                        <div id="1" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://i.pinimg.com/564x/fd/16/e3/fd16e3984b08d9e261abf7e080faaa9f.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                               <h4><a onclick=viewProduct(2,1) class="pdName text-hover" type="button" >Green Teapot</a></h4> 
+                                <div class="product-bottom-details">
+                                  <div class="price">
+                                    $<span class="product-price">36.00</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(1)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="2" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://theme.pixflow.net/massive-dynamic/store-handicraft/wp-content/uploads/sites/62/2015/12/7d4588a387bf49a569a9698afcaf537a-1.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(1,2) type="button" class="pdName text-hover">Squirrel Plate</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">23.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(2)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="3" class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://i.etsystatic.com/22033882/r/il/69e109/2744690394/il_fullxfull.2744690394_etkd.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(4,3) type="button" class="pdName text-hover">Porcelain Cream Pourer</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">24.85</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(3)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="4" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://i.pinimg.com/236x/63/ac/bb/63acbb6698e5c720a14699cccea7d861.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(5,4) type="button" class="pdName text-hover">Confetti Spoon Rest</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">18.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(4)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="5" class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYAn9Q7xnKdtRNja64IHW9tZtCJdvDThYkFg&s" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(6,5) type="button" class="pdName text-hover">Ceramic Espresso Cup</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">30.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(5)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="6" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://assets.bigcartel.com/product_images/a9c31de6-6f3e-46ad-baa4-118d8aa73026/fraise-mon-amour.jpg?auto=format&fit=max&h=346&w=346" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(7,6) type="button" class="pdName text-hover">FRAISE MUG                                </a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">29.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(6)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="7" class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://www.shopsaltandsundry.com/cdn/shop/products/Salt_Sundry_DemetriaChappo_ManyEyesCup_Gray_01_900x.jpg?v=1628194428" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(8,7) type="button" class="pdName text-hover">Many Eyes Cup</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">30.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(7)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div  class="col mb-5">
+                        <div id="8" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfKuqy96_xFNRaIds-ykA4SNnmfdzTVGH8Eg&s" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(9,8) type="button" class="pdName text-hover">Ceramic Ghost Trinket Dish</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span>20.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(8)"  class="cart-link"><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="9" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://i.pinimg.com/236x/96/fd/c1/96fdc1fa3955967982d08feaa9a42d4a.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(10,9) type="button" class="pdName text-hover">Pool plate</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">20.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(9)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="10" class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTABPASoJ1YWW3DcqOP8cFAuuQqVBybs_MZNhCn-wA7__NCs9ArZ1fB36xdwc_dpP_Swhs&usqp=CAU" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(11,10) type="button" class="pdName text-hover">Ducks Cup and Saucer</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">32.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(10)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="11" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://images.squarespace-cdn.com/content/v1/5d4c9175d36bb3000111a260/1651791880565-7CD0H0QM1N7M96H0HQSH/gabrielle-strong-seashell-pinchpot-3a.jpg?format=1000w" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(12,11) type="button" class="pdName text-hover"> porcelain pinch pot</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">30.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(11)"  class="cart-link" ><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="12" class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://www.cheerfullymade.com/cdn/shop/files/IMG-9361_720x.jpg?v=1720455853" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(13,12) type="button" class="pdName text-hover">Flower Mug
+                                </a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">23.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(12)"  class="cart-link" ><i class="fa fa-shopping-cart" ></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="13" class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="https://i.etsystatic.com/18651959/r/il/ca7379/3209014828/il_794xN.3209014828_3n98.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(14,13) type="button" class="pdName text-hover">Kitty Plate</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price">$<span class="product-price">19.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(13)"  class="cart-link" ><i class="fa fa-shopping-cart" ></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="14" class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top productImg" src="//www.shopsaltandsundry.com/cdn/shop/files/Salt_Sundry_RiseandShineCeramics_FruitSalad_Bowl_001_150x.jpg?v=1712609977" alt="..." />
+                            <!-- Product details-->
+                            <div class="product-details">
+                                <h4><a onclick=viewProduct(15,14) type="button" class="pdName text-hover">Fruit Salad Cereal Bowl</a></h4>
+                                <div class="product-bottom-details">
+                                  <div class="price" >$<span class="product-price">26.99</span></div>
+                                  <div class="product-links">
+                                    <a type="button" onclick="moveToCart(14)" class="cart-link"><i class="fa fa-shopping-cart"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- Footer-->
+        <footer class="pt-3 mt-4 bg-dark text-light">
+            <div class="container">
+              <div class="pt-3 pb-3">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                  <li class="nav-item"><a href="#" class="nav-link text-light px-2 ">Home</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-light px-2 ">Features</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-light px-2 ">Pricing</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-light px-2 ">FAQs</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-light px-2 ">About</a></li>
+                </ul>
+                <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 pb-3">
+                  <p class="col-md-4 mb-0 ">© 2024 Company, Inc</p>
+        
+                  <a href="/"
+                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <img
+                      src="https://theme.pixflow.net/massive-dynamic/store-handicraft/wp-content/uploads/sites/62/2017/05/PC-LOGO-light-1.png"
+                      width="150px">
+                  </a>
+        
+                  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands brands fa-xl fa-facebook"
+                          ></i></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands brands fa-xl fa-instagram"
+                          ></i></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands brands fa-xl fa-twitter"
+                          ></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+    <script src="./script.js"></script>
+    </body>
+</html>
